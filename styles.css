@@ -1,0 +1,161 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url('https://example.com/election-bg.jpg'); /* Replace with actual background image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #f4b400; /* Election-themed color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+form label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    color: #f4f4f4;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, select:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+button, input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745; /* Green for action buttons */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Login Section */
+#loginSection {
+    margin-bottom: 30px;
+}
+
+#loginButton {
+    background-color: #007bff; /* Primary election theme color */
+}
+
+#loginButton:hover {
+    background-color: #0056b3;
+}
+
+/* Election Form */
+form {
+    margin-bottom: 30px;
+}
+
+#electionForm {
+    display: none;
+}
+
+#candidateInfo {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    color: #ddd;
+}
+
+/* Election Results */
+#results {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#results h2 {
+    font-size: 1.5em;
+    color: #f4b400;
+    margin-bottom: 10px;
+}
+
+ul#resultList {
+    list-style-type: none;
+}
+
+ul#resultList li {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Timer */
+#timer {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #f4b400;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(244, 180, 0, 0.6);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(244, 180, 0, 0.8);
+}

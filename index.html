@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Election System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Online Election System</h1>
+
+        <!-- User Authentication -->
+        <div id="loginSection">
+            <h2>Login</h2> 
+            <label for="voterID">Voter ID:</label>
+            <input type="text" id="voterID" required><br><br>
+
+            <label for="voterPassword">Password:</label>
+            <input type="password" id="voterPassword" required><br><br>
+
+            <button id="loginButton">Login</button>
+            <p><a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+        </div>
+
+        <!-- Forgot Password -->
+        <div id="forgotPasswordSection" style="display:none;">
+            <h2>Forgot Password</h2>
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" required><br><br>
+            <button id="resetPasswordButton">Reset Password</button>
+            <p><a href="#" id="backToLogin">Back to Login</a></p>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="registrationSection" style="display:none;">
+            <h2>Register</h2>
+            <label for="newVoterID">New Voter ID:</label>
+            <input type="text" id="newVoterID" required><br><br>
+
+            <label for="newVoterPassword">New Password:</label>
+            <input type="password" id="newVoterPassword" required><br><br>
+
+            <label for="newVoterName">Name:</label>
+            <input type="text" id="newVoterName" required><br><br>
+
+            <button id="registerButton">Register</button>
+            <p><a href="#" id="backToLoginFromRegister">Back to Login</a></p>
+        </div>
+
+        <!-- Voting Form -->
+        <form id="electionForm" style="display:none;">
+            <h2>Vote</h2>
+            <label for="voterName">Voter Name:</label>
+            <input type="text" id="voterName" required readonly><br><br>
+
+            <label for="candidate">Choose your candidate:</label>
+            <select id="candidate" required>
+                <option value="happy yadav from bjp">happy yadav from bjp</option>
+                <option value="priyanka yadav from sp">priyanka yadav from sp</option>
+                <option value="dharmendra yadav from Aap">dharmendra yadav from Aap</option>
+            </select><br><br>
+
+            <button type="submit">Vote</button>
+        </form>
+
+        <!-- Candidate Information -->
+        <div id="candidateInfo" style="display:none;">
+            <h2>Candidate Information</h2>
+            <div id="candidateDetails"></div>
+        </div>
+
+        <!-- Election Results -->
+        <div id="results">
+            <h2>Election Results</h2>
+            <ul id="resultList"></ul>
+            <div id="voteSummary">
+                <h3>Vote Summary</h3>
+                <p>Total Votes: <span id="totalVotes">0</span></p>
+                <p>Votes for Candidate 1: <span id="votesFor1">0</span></p>
+                <p>Votes for Candidate 2: <span id="votesFor2">0</span></p>
+                <p>Votes for Candidate 3: <span id="votesFor3">0</span></p>
+            </div>
+        </div>
+
+        <!-- Election Timer -->
+        <div id="electionTimer">
+            <h2>Election Ends In:</h2>
+            <p id="timer">00:00:00</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
